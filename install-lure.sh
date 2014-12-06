@@ -98,6 +98,7 @@ if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	apt-get install libapache2-mod-php5
 	apt-get install php5-common
 	apt-get install php5-json
+	apt-get install php5-sqlite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
 fi
 

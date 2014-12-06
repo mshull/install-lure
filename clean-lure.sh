@@ -28,9 +28,9 @@ select yn in "yes" "no"; do
 			apt-get purge libapache2-mod-php5 -y;
 			apt-get purge php5-common -y;
 			apt-get purge php5-json -y;
+			apt-get purge php5-sqlite -y;
 			apt-get purge php5 -y;
 			apt-get purge apache2 -y;
-			apt-get purge -y;
 			apt-get autoremove -y;
 			rm -rf /var/www/lure;
 			echo -e "\nSUCCESS: Lure and it's dependencies are gone"; 
