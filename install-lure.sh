@@ -11,8 +11,8 @@
 #
 
 # variables
-#CURRDIR="$(pwd)/lure-master"
 CURRDIR="/var/www/lure/lure-master"
+DIRCFG="\a<Directory $CURRDIR/>\aOptions Indexes FollowSymLinks\aAllowOverride All\aRequire all granted\a</Directory>\a"
 VHOSTFILE="/etc/apache2/sites-available/000-default.conf"
 NEEDUPDATE=1
 DIV="\n--------------------------------------------------------------------------\n"
@@ -27,7 +27,7 @@ UPDATE () {
 
 CHANGEVHOST () {
 	if [ -f $VHOSTFILE ]; then
-		sed -i "s#DocumentRoot.*#DocumentRoot $CURRDIR#" $VHOSTFILE
+		sed -i "s#DocumentRoot.*#DocumentRoot $CURRDIR $DIRCFG#" $VHOSTFILE
 		echo -e "\nSUCCESS: Changed vhost to $CURRDIR";
 	else
 		echo -e "\nFAIL: vhost conf file not found";
@@ -99,6 +99,7 @@ if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	apt-get install php5-common
 	apt-get install php5-json
 	apt-get install php5-sqlite
+	a2enmod rewrite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
 fi
 
