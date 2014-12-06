@@ -133,7 +133,7 @@ echo -e "\nSUCCESS: Download and unzip successful"
 
 # set permissions
 echo -e "$DIV Setting Lure Directory Permissions $DIV"
-chmod 777 $CURRDIR -R
+chmod 755 $CURRDIR -R
 echo -e "\nSUCCESS: Permission setting successful"
 
 # restart apache
@@ -149,6 +149,7 @@ echo -e "$DIV FINISHED: Lure Installation Successful $DIV"
 
 # print out url
 echo -e " API URL:    http://localhost"
-echo -e " Admin URL:  http://localhost/admin (un: jharvard, pw: crimson)\n"
+echo -e " Admin URL:  http://localhost/admin (un: jharvard, pw: crimson)"
+echo -e " Source:     $CURRDIR\n"
 echo -e " Notes:      For remote access change localhost to your domain or IP."
 echo -e "             Admin contains API instructions and detailed documentation.\n"
