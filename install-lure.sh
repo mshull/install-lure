@@ -12,7 +12,7 @@
 
 # variables
 #CURRDIR="$(pwd)/lure-master"
-CURRDIR="/var/lure/lure-master"
+CURRDIR="/var/www/lure/lure-master"
 VHOSTFILE="/etc/apache2/sites-available/000-default.conf"
 NEEDUPDATE=1
 DIV="\n--------------------------------------------------------------------------\n"
@@ -127,13 +127,13 @@ fi
 # download latest and unzip
 echo -e "$DIV Downloading latest Lure code $DIV"
 wget https://github.com/mshull/lure/archive/master.zip
-unzip -o master.zip -d /var/lure
+unzip -o master.zip -d /var/www/lure
 rm master.zip
 echo -e "\nSUCCESS: Download and unzip successful"
 
 # set permissions
 echo -e "$DIV Setting Lure Directory Permissions $DIV"
-chmod 755 $CURRDIR -R
+chmod 777 $CURRDIR -R
 echo -e "\nSUCCESS: Permission setting successful"
 
 # restart apache

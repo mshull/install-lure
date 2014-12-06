@@ -32,8 +32,7 @@ select yn in "yes" "no"; do
 			apt-get purge apache2 -y;
 			apt-get purge -y;
 			apt-get autoremove -y;
-			rm -rf lure-master;
-			rm -rf /var/lure;
+			rm -rf /var/www/lure;
 			echo -e "\nSUCCESS: Lure and it's dependencies are gone"; 
 			break;;
 		no ) 
