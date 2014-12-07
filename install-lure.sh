@@ -95,12 +95,12 @@ fi
 # install apache mod if needed
 if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	echo -e "$DIV Installing Apache2 PHP5 Mod and Other Files $DIV"
-	apt-get install libapache2-mod-php5
-	apt-get install php5-common
-	apt-get install php5-json
-	apt-get install php5-sqlite
-	apt-get install php5-curl
-	apt-get install php5-cli
+	apt-get install libapache2-mod-php5 -y
+	apt-get install php5-common -y
+	apt-get install php5-json -y
+	apt-get install php5-sqlite -y
+	apt-get install php5-curl -y
+	apt-get install php5-cli -y
 	a2enmod rewrite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
 fi
