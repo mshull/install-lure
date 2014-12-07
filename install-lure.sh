@@ -93,7 +93,7 @@ if [ $PHP -eq 0 ]; then
 fi
 
 # install apache mod if needed
-if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
+#if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	echo -e "$DIV Installing Apache2 PHP5 Mod and Other Files $DIV"
 	apt-get install libapache2-mod-php5 -y
 	apt-get install php5-common -y
@@ -103,7 +103,7 @@ if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	apt-get install php5-cli -y
 	a2enmod rewrite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
-fi
+#fi
 
 # ask if auto-add vhost file
 echo -e "$DIV Would you like us to point Apache to Lure automatically?\n\n Warning: This overwrites existing websites running on this server. \n Not recommended if you already run Apache websites on this machine. $DIV"
