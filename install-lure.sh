@@ -100,6 +100,7 @@ if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	apt-get install php5-json
 	apt-get install php5-sqlite
 	apt-get install php5-curl
+	apt-get install php5-cli
 	a2enmod rewrite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
 fi
