@@ -12,7 +12,7 @@
 
 # variables
 CURRDIR="/var/www/lure/lure-master"
-DIRCFG="\a<Directory $CURRDIR/>\aOptions Indexes FollowSymLinks\aAllowOverride All\aRequire all granted\a</Directory>\a"
+DIRCFG="\n<Directory $CURRDIR/>\nOptions Indexes FollowSymLinks\nAllowOverride All\nRequire all granted\n</Directory>\n"
 VHOSTFILE="/etc/apache2/sites-available/000-default.conf"
 NEEDUPDATE=1
 DIV="\n--------------------------------------------------------------------------\n"
@@ -99,6 +99,7 @@ if [ $PHP -eq 0 ] || [ $APACHE -eq 0 ]; then
 	apt-get install php5-common
 	apt-get install php5-json
 	apt-get install php5-sqlite
+	apt-get install php5-curl
 	a2enmod rewrite
 	echo -e "\nSUCCESS: Installed PHP5 Mod and other files"
 fi

@@ -29,6 +29,7 @@ select yn in "yes" "no"; do
 			apt-get purge php5-common -y;
 			apt-get purge php5-json -y;
 			apt-get purge php5-sqlite -y;
+			apt-get purge php5-curl -y;
 			apt-get purge php5 -y;
 			apt-get purge apache2 -y;
 			apt-get autoremove -y;
