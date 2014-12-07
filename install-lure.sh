@@ -138,6 +138,7 @@ echo -e "\nSUCCESS: Download and unzip successful"
 # set permissions
 echo -e "$DIV Setting Lure Directory Permissions $DIV"
 chmod 755 $CURRDIR -R
+chmod 777 $CURRDIR/data -R
 echo -e "\nSUCCESS: Permission setting successful"
 
 # restart apache
